@@ -11,6 +11,7 @@
 - プログラム終了時にはdeleteLPSystem()関数を呼び出して下さい。
 
 ### 使用した時の比較
+SDL2のみですが、画像一枚に１３行も書かないといけないが、ラッパーを利用すると２行のみで簡単に描画可能に！
 #### SDL2のみ
 ```cpp
 //SDL2のみ
@@ -28,15 +29,12 @@ dst.h = img->h;
 SDL_RenderCopyEx(render, imgTxr, &src, &dst, 0 , NULL, SDL_FLIP_NONE);
 SDL_DestroyTexture(imgTxr);
 ```
-画像一枚に１３行も書かないといけない。
-
 #### ProcessingToSDL使用時
 ```cpp
 //ProcessingToSDL使用時
 auto hoge = loadImage("hoge.png");
 image(hoge, 10, 10);
 ```
-２行のみで簡単に描画可能に！
 
 ### 利用について
 - 自由に利用してかまいませんし、改変して再公開してもかまいません。
