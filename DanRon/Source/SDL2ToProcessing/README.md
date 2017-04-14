@@ -14,9 +14,9 @@
 #### SDL2のみ
 ```cpp
 //SDL2のみ
-auto rw = SDL_RWFromFile("hoge.png", "r");
-auto imageR = IMG_LoadPNG_RW(rw);
-auto imgTxr = SDL_CreateTextureFromSurface(systemVar::systemRender, img);
+auto img = SDL_RWFromFile("hoge.png", "r");
+auto imageR = IMG_LoadPNG_RW(img);
+auto imgTxr = SDL_CreateTextureFromSurface(imageR, img);
 src.x = 0;
 src.y = 0;
 src.w = img->w;
