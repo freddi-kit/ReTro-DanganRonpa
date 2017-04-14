@@ -20,11 +20,11 @@
    ![1](md.photos/1.png "1")
 
 1. Targetsの中にあるDanRonを選択して、General -> Linked FrameWorks and Librariesに以下のファイルを追加してください。
+    - SDL2.a
+    - SDL2_ttf.a
+    - SDL2_image.a
+    - SDL2_mixer.a
    ![2](md.photos/2.png "2")
-  - SDL2.a
-  - SDL2_ttf.a
-  - SDL2_image.a
-  - SDL2_mixer.a
 
 1. Build Settings -> Search Paths -> Header Search Pathsに、SDL関係のヘッダーファイルが入っているディレクトリのパスを入れてください。
    ![3](md.photos/3.png "3")
