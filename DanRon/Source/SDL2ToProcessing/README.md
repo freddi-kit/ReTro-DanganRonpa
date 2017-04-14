@@ -52,7 +52,7 @@ image(hoge, 10, 10);
 ### 実装した変数
 - frameCount
 
-### 実装した関数（詳しい説明は略）
+### 実装した関数
 - void fill(int R,int G,int B,int Alpha);
 - void fill(int C,int Alpha);
 - void fill(int C);
