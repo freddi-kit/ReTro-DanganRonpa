@@ -10,6 +10,28 @@
 - 使う前にInitLPSystem(SDL_Render*,SDL_Window*)関数を呼び出して下さい
 - プログラム終了時にはdeleteLPSystem()関数を呼び出して下さい。
 
+### 使用例
+```cpp
+//SDL2のみ
+auto rw = SDL_RWFromFile("hoge.png", "r");
+auto imageR = IMG_LoadPNG_RW(rw);
+auto imgTxr = SDL_CreateTextureFromSurface(systemVar::systemRender, img);
+src.x = 0;
+src.y = 0;
+src.w = img->w;
+src.h = img->h;
+dst.x = 10;
+dst.y = 10;
+dst.w = img->w;
+dst.h = img->h;
+SDL_RenderCopyEx(render, imgTxr, &src, &dst, 0 , NULL, SDL_FLIP_NONE);
+SDL_DestroyTexture(imgTxr);
+
+//ProcessingToSDL使用時
+auto hoge = loadImage("hoge.png");
+image(hoge, 10, 10);
+```
+
 ### 利用について
 - 自由に利用してかまいませんし、改変して再公開してもかまいません。
 
